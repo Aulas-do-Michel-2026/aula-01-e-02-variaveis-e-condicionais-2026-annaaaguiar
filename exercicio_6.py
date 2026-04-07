@@ -52,3 +52,21 @@ Qual país você vai viajar? China
 Resposta:
 Não temos essa moeda em caixa.
 """
+
+destino = (input("Digite o destino da viagem: "))
+if destino in ["Estados Unidos" , "Argentina", "Japão"]:
+    valor= (float(input("Qual seria o valor que gostaria de converter? ")))
+
+    if destino == "Estados Unidos":
+        resultado = valor / 5
+        moeda = "USD"
+    elif destino == "Argentina":
+        resultado = valor * 180
+        moeda = "ARS"
+    elif destino == "Japão":
+        resultado = valor * 30
+        moeda = "JPY"
+    print(f"O valor convertido é: {resultado:.2f} {moeda}")
+
+else:
+    print("Não temos essa moeda em caixa.")
