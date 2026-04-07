@@ -53,5 +53,21 @@ Digite o genoma de referência: hg38
 
 Resposta:
 Não
-
 """
+
+cromo = (input("Digite o cromossomo da variante: "))
+position = (int(input("Digite a posição: ")))
+genoma_ref = (input("Digite o genoma de referencia: "))
+
+
+if genoma_ref == "hg19":
+    BRCA1 = (cromo == "chr17") and (41196312 <= position <= 41277500)
+elif genoma_ref == "hg38":
+    BRCA1 = (cromo == "chr17") and (43044295 <= position <= 43125483)
+
+if BRCA1 == True:
+    print("Sim")
+else:
+    print("Não")
+
+
