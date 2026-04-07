@@ -37,3 +37,14 @@ Resposta:
 Sim
 
 """
+
+cromo = (input("Digite o cromossomo da variante: "))
+position = (int(input("Digite a posição: ")))
+
+BRCA1 = (cromo == "chr17") and (position >= 41196312 <= 41277500 )
+
+if BRCA1 == True:
+    print("Sim")
+else:
+    print("Não")
+    
